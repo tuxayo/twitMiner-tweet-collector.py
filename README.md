@@ -17,7 +17,7 @@ sudo easy_install twitter
 
 python3 tweet\_collector/tweet\_collector_main.py
 
-## Version 0.2.0
+## Version 0.2.1
 What works:
 
 - logs in to Twitter
