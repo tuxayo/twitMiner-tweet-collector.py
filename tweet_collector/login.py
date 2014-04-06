@@ -1,6 +1,7 @@
 # Python 3
 import twitter
 import sys
+import logging
 
 from twitter.oauth import write_token_file, read_token_file
 from twitter.oauth_dance import oauth_dance
@@ -20,9 +21,9 @@ def login_and_get_twitter():
     
     try:
         (oauth_token, oauth_token_secret) = read_token_file(TOKEN_FILE)
-        print('read token from file success')
+        logging.info('read token from file success')
     except IOError as e:
-        print('read token from file failed, requesting new token')
+        logging.info('read token from file failed, requesting new token')
         (oauth_token, oauth_token_secret) = oauth_dance(app_name, consumer_key,
                 consumer_secret)
   
